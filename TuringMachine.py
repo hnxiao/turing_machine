@@ -52,7 +52,7 @@ class TuringMachine:
         return self._tape[self._r]
 
     ##############
-    # behaviours #
+    # operations #
     ##############
     def P0(self,):
         return self._print_to_tape(0)
