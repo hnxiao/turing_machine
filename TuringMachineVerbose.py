@@ -9,7 +9,7 @@ class TuringMachineVerbose(TuringMachine):
                  initial_tape = {},
                  ):
         self._debug = False
-        self._stop_each_step = True
+        self._prompt_each_step = True
 
         TuringMachine.__init__(
             self,
