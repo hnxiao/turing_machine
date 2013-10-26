@@ -19,7 +19,8 @@ class TuringMachine:
     # main process #
     ################
     def process(self,):
-        (operations, next_m_config) = self._lookup_table()
+        scanned_symbol = self._scan_tape()
+        (operations, next_m_config) = self._lookup_table(scanned_symbol)
         for operation in operations:
             try:
                 getattr(self, operation)()
@@ -37,14 +38,13 @@ class TuringMachine:
         sys.stdout.write(self._tape.values())
         sys.stdout.write("\n")
         return True
-    def _lookup_table(self,):
-        scanned_symbol = self._read()
+    def _lookup_table(self, scanned_symbol):
         try:
             (operations, next_m_config) = self._cb_table[self._m_config][scanned_symbol]
         except IndexError:
             self.halt()
         return (operations, next_m_config)
-    def _read(self,):
+    def _scan_tape(self,):
         try:
             scanned_symbol = self._tape[self._r]
         except KeyError:
