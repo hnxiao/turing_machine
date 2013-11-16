@@ -93,11 +93,11 @@ class TuringMachine:
 
 
 def process(cb_table_filepath, initial_m_config, initial_tape, interval=0.5):
-    TMV = TuringMachine(cb_table_filepath,
-                        initial_m_config, initial_tape)
+    TM = TuringMachine(cb_table_filepath,
+                       initial_m_config, initial_tape)
     while True:
         time.sleep(interval)
-        res = TMV.process()
+        res = TM.process()
 
 def main():
     cb_table_dir = "../cb_table/"
