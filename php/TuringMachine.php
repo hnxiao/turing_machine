@@ -133,6 +133,7 @@ class TuringMachine
     }
 }
 
+/*
 function do_tm_process($cb_table_filepath, $initial_m_config, $initial_tape, $interval = 1.0)
 {
     $tm = new TuringMachine($cb_table_filepath, $initial_m_config, $initial_tape);
@@ -147,4 +148,5 @@ $cb_table_dir = "../cb_table/";
 #do_tm_process(sprintf("%s/one_forth.txt", $cb_table_dir), "b", array());
 # prints 1/4 in binary
 do_tm_process(sprintf("%s/one_third.txt", $cb_table_dir), "b", array());
+*/
 
