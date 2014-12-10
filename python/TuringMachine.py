@@ -37,7 +37,7 @@ class TuringMachine:
         exit(1)
 
     def _output_current_tape(self,):
-        sys.stdout.write(self._tape.values())
+        sys.stdout.write( str(self._tape.values()) )
         sys.stdout.write("\n")
         return True
     def _lookup_table(self, scanned_symbol):
